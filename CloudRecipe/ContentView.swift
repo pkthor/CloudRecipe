@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
   @EnvironmentObject var recipes: Recipes
-  @State private var newItem = Recipe(name:"")
+  @State private var newItem = Recipe(name:"",submittedBy:"")
   @State private var showEditedTextField = false
-  @State private var editedItem = Recipe(name: "")
+  @State private var editedItem = Recipe(name: "",submittedBy:"")
   
   var body: some View {
     NavigationView {
@@ -22,7 +22,7 @@ struct ContentView: View {
               .textFieldStyle(RoundedBorderTextFieldStyle())
             Button("Add") {
               if !self.newItem.name.isEmpty {
-                let newItem = Recipe(name: self.newItem.name)
+                let newItem = Recipe(name: self.newItem.name, submittedBy:"")
                 //MARK: - saving to CloudKit
                 CloudKitHelper.save(item: newItem) { (result) in
                   switch result {
@@ -33,7 +33,7 @@ struct ContentView: View {
                       print(err.localizedDescription)
                   }
                 }
-                self.newItem = Recipe(name: "")
+                self.newItem = Recipe(name: "",submittedBy:"")
               }
             }
           }

@@ -12,8 +12,7 @@ import CloudKit
 struct CloudKitHelper {
   // MARK: - record types
   struct RecordType {
-    static let Items = "Recipes"
-//    static let Recipes = "Recipes"
+    static let Recipes = "Recipes"
   }
   // MARK: - error
   enum CloudKitHelperError: Error {
@@ -24,7 +23,7 @@ struct CloudKitHelper {
   }
   // MARK: - saving to CloudKit
       static func save(item: Recipe, completion: @escaping (Result<Recipe, Error>) -> ()) {
-          let itemRecord = CKRecord(recordType: RecordType.Items)
+          let itemRecord = CKRecord(recordType: RecordType.Recipes)
           itemRecord["name"] = item.name as CKRecordValue
           
           CKContainer.default().publicCloudDatabase.save(itemRecord) { (record, err) in
@@ -42,7 +41,7 @@ struct CloudKitHelper {
                       completion(.failure(CloudKitHelperError.castFailure))
                       return
                   }
-                  let recipe = Recipe(recordID: recordID, name: name)
+                  let recipe = Recipe(recordID: recordID, name: name, submittedBy:"")
                   completion(.success(recipe))
               }
           }
@@ -52,7 +51,7 @@ struct CloudKitHelper {
       static func fetch(completion: @escaping (Result<Recipe, Error>) -> ()) {
           let pred = NSPredicate(value: true)
           let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-          let query = CKQuery(recordType: RecordType.Items, predicate: pred)
+          let query = CKQuery(recordType: RecordType.Recipes, predicate: pred)
           query.sortDescriptors = [sort]
 
           let operation = CKQueryOperation(query: query)
@@ -63,7 +62,7 @@ struct CloudKitHelper {
               DispatchQueue.main.async {
                   let recordID = record.recordID
                   guard let name = record["name"] as? String else { return }
-                  let recipe = Recipe(recordID: recordID, name: name)
+                  let recipe = Recipe(recordID: recordID, name: name,submittedBy:"")
                   completion(.success(recipe))
               }
           }
@@ -131,7 +130,7 @@ struct CloudKitHelper {
                           completion(.failure(CloudKitHelperError.castFailure))
                           return
                       }
-                      let recipe = Recipe(recordID: recordID, name: name)
+                      let recipe = Recipe(recordID: recordID, name: name,submittedBy:"")
                       completion(.success(recipe))
                   }
               }
