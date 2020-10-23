@@ -15,6 +15,7 @@
 		4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1232540F54400EECB60 /* CloudKitHelper.swift */; };
 		4305D12A2540F83D00EECB60 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4305D1292540F83D00EECB60 /* CloudKit.framework */; };
 		4305D1302542710600EECB60 /* CloudRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1072540E10700EECB60 /* CloudRecipeApp.swift */; };
+		430DA18B25428B8900E2413B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430DA18A25428B8900E2413B /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4305D1232540F54400EECB60 /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		4305D1262540F83A00EECB60 /* CloudRecipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudRecipe.entitlements; sourceTree = "<group>"; };
 		4305D1292540F83D00EECB60 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		430DA18A25428B8900E2413B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4305D1182540E14300EECB60 /* Recipes.swift */,
 				4305D11C2540E1B100EECB60 /* Recipe.swift */,
 				4305D1232540F54400EECB60 /* CloudKitHelper.swift */,
+				430DA18A25428B8900E2413B /* SwiftUIView.swift */,
 			);
 			path = CloudRecipe;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				4305D1302542710600EECB60 /* CloudRecipeApp.swift in Sources */,
 				4305D10A2540E10700EECB60 /* ContentView.swift in Sources */,
+				430DA18B25428B8900E2413B /* SwiftUIView.swift in Sources */,
 				4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */,
 				4305D1192540E14300EECB60 /* Recipes.swift in Sources */,
 				4305D11D2540E1B100EECB60 /* Recipe.swift in Sources */,
