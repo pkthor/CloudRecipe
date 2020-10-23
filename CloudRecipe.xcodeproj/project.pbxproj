@@ -11,6 +11,11 @@
 		4305D10A2540E10700EECB60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1092540E10700EECB60 /* ContentView.swift */; };
 		4305D10C2540E10700EECB60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D10B2540E10700EECB60 /* Assets.xcassets */; };
 		4305D10F2540E10700EECB60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D10E2540E10700EECB60 /* Preview Assets.xcassets */; };
+		4305D1192540E14300EECB60 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1182540E14300EECB60 /* Recipes.swift */; };
+		4305D11D2540E1B100EECB60 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D11C2540E1B100EECB60 /* Recipe.swift */; };
+		4305D1212540E97600EECB60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1202540E97600EECB60 /* SceneDelegate.swift */; };
+		4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1232540F54400EECB60 /* CloudKitHelper.swift */; };
+		4305D12A2540F83D00EECB60 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4305D1292540F83D00EECB60 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,12 @@
 		4305D10B2540E10700EECB60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4305D10E2540E10700EECB60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4305D1102540E10700EECB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4305D1182540E14300EECB60 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		4305D11C2540E1B100EECB60 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		4305D1202540E97600EECB60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4305D1232540F54400EECB60 /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		4305D1262540F83A00EECB60 /* CloudRecipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudRecipe.entitlements; sourceTree = "<group>"; };
+		4305D1292540F83D00EECB60 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4305D12A2540F83D00EECB60 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 			children = (
 				4305D1062540E10700EECB60 /* CloudRecipe */,
 				4305D1052540E10700EECB60 /* Products */,
+				4305D1282540F83D00EECB60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +65,16 @@
 		4305D1062540E10700EECB60 /* CloudRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				4305D1262540F83A00EECB60 /* CloudRecipe.entitlements */,
 				4305D1072540E10700EECB60 /* CloudRecipeApp.swift */,
 				4305D1092540E10700EECB60 /* ContentView.swift */,
 				4305D10B2540E10700EECB60 /* Assets.xcassets */,
 				4305D1102540E10700EECB60 /* Info.plist */,
 				4305D10D2540E10700EECB60 /* Preview Content */,
+				4305D1182540E14300EECB60 /* Recipes.swift */,
+				4305D11C2540E1B100EECB60 /* Recipe.swift */,
+				4305D1202540E97600EECB60 /* SceneDelegate.swift */,
+				4305D1232540F54400EECB60 /* CloudKitHelper.swift */,
 			);
 			path = CloudRecipe;
 			sourceTree = "<group>";
@@ -67,6 +85,14 @@
 				4305D10E2540E10700EECB60 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4305D1282540F83D00EECB60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4305D1292540F83D00EECB60 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4305D1212540E97600EECB60 /* SceneDelegate.swift in Sources */,
 				4305D10A2540E10700EECB60 /* ContentView.swift in Sources */,
+				4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */,
+				4305D1192540E14300EECB60 /* Recipes.swift in Sources */,
+				4305D11D2540E1B100EECB60 /* Recipe.swift in Sources */,
 				4305D1082540E10700EECB60 /* CloudRecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudRecipe/CloudRecipe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CloudRecipe/Preview Content\"";
 				DEVELOPMENT_TEAM = P7N73XRW62;
@@ -289,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudRecipe/CloudRecipe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CloudRecipe/Preview Content\"";
 				DEVELOPMENT_TEAM = P7N73XRW62;

@@ -5,13 +5,25 @@
 //  Created by P. Kurt Thorderson on 10/21/20.
 //
 
-import SwiftUI
+//import SwiftUI
+//
+//@main
+//struct CloudRecipeApp: App {
+//  @Environment(\.scenePhase) var scenePhase
+//  @StateObject var items = Recipes()
+//  
+//    var body: some Scene {
+//        WindowGroup {
+//          ContentView().environmentObject(items)
+//        }
+//    }
+//}
 
-@main
-struct CloudRecipeApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
+//struct MyScene: Scene {
+//  @Environment(\.scenePhase) private var scenePhase
+//  var body: some Scene {
+//    WindowGroup {
+//      MyRootView()
+//    }
+//  }
+//}
