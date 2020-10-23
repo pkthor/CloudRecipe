@@ -10,7 +10,7 @@ import CloudKit
 
 struct Recipe: Identifiable {
   var id = UUID()
-  var recordID = CKRecord.ID.self
+  var recordID: CKRecord.ID?
   var name:String
 //  var category:String
 //  var cookTime:Int

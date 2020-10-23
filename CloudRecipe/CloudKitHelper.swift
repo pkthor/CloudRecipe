@@ -13,6 +13,7 @@ struct CloudKitHelper {
   // MARK: - record types
   struct RecordType {
     static let Items = "Items"
+    static let Recipes = "Recipes"
   }
   // MARK: - error
   enum CloudKitHelperError: Error {
@@ -30,15 +31,18 @@ struct CloudKitHelper {
               DispatchQueue.main.async {
                   if let err = err {
                       completion(.failure(err))
+                    print("Error PKT 1")
                       return
                   }
                   guard let record = record else {
                       completion(.failure(CloudKitHelperError.recordFailure))
+                    print("Error PKT 2")
                       return
                   }
                   let recordID = record.recordID
                   guard let name = record["name"] as? String else {
                       completion(.failure(CloudKitHelperError.castFailure))
+                    print("Error PKT 3")
                       return
                   }
                   let recipe = Recipe(recordID: recordID, name: name)
@@ -46,28 +50,7 @@ struct CloudKitHelper {
               }
           }
       }
-//  static func save(item: Recipe, completion: @escaping (Result<Recipe, Error>) ->
-//    ()) {
-//    let itemRecord = CKRecord(recordType: RecordType.Items)
-//    itemRecord["name"] = item.name as CKRecordValue
-//    CKContainer.default().publicCloudDatabase.save(itemRecord) { (record, err) in
-//      if let err = err {
-//        completion(.failure(err))
-//        return
-//      }
-//      guard let record = record else {
-//        completion(.failure(CloudKitHelperError.recordFailure))
-//        return
-//      }
-//      let id = record.recordID
-//      guard let name = record["name"] as? String else {
-//        completion(.failure(CloudKitHelperError.castFailure))
-//        return
-//      }
-//      let recipe = Recipe(recordID: id, name: name)
-//      completion(.success(recipe))
-//    }
-//  }
+
   // MARK: - fetching from CloudKit
       static func fetch(completion: @escaping (Result<Recipe, Error>) -> ()) {
           let pred = NSPredicate(value: true)
@@ -112,6 +95,7 @@ struct CloudKitHelper {
               DispatchQueue.main.async {
                   if let err = err {
                       completion(.failure(err))
+                    print("PKT failure deleting")
                       return
                   }
                   guard let recordID = recordID else {

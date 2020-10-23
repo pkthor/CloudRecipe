@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4305D1082540E10700EECB60 /* CloudRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1072540E10700EECB60 /* CloudRecipeApp.swift */; };
 		4305D10A2540E10700EECB60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1092540E10700EECB60 /* ContentView.swift */; };
 		4305D10C2540E10700EECB60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D10B2540E10700EECB60 /* Assets.xcassets */; };
 		4305D10F2540E10700EECB60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D10E2540E10700EECB60 /* Preview Assets.xcassets */; };
 		4305D1192540E14300EECB60 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1182540E14300EECB60 /* Recipes.swift */; };
 		4305D11D2540E1B100EECB60 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D11C2540E1B100EECB60 /* Recipe.swift */; };
-		4305D1212540E97600EECB60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1202540E97600EECB60 /* SceneDelegate.swift */; };
 		4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1232540F54400EECB60 /* CloudKitHelper.swift */; };
 		4305D12A2540F83D00EECB60 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4305D1292540F83D00EECB60 /* CloudKit.framework */; };
+		4305D1302542710600EECB60 /* CloudRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D1072540E10700EECB60 /* CloudRecipeApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		4305D1102540E10700EECB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4305D1182540E14300EECB60 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		4305D11C2540E1B100EECB60 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		4305D1202540E97600EECB60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4305D1232540F54400EECB60 /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		4305D1262540F83A00EECB60 /* CloudRecipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudRecipe.entitlements; sourceTree = "<group>"; };
 		4305D1292540F83D00EECB60 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -73,7 +71,6 @@
 				4305D10D2540E10700EECB60 /* Preview Content */,
 				4305D1182540E14300EECB60 /* Recipes.swift */,
 				4305D11C2540E1B100EECB60 /* Recipe.swift */,
-				4305D1202540E97600EECB60 /* SceneDelegate.swift */,
 				4305D1232540F54400EECB60 /* CloudKitHelper.swift */,
 			);
 			path = CloudRecipe;
@@ -164,12 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4305D1212540E97600EECB60 /* SceneDelegate.swift in Sources */,
+				4305D1302542710600EECB60 /* CloudRecipeApp.swift in Sources */,
 				4305D10A2540E10700EECB60 /* ContentView.swift in Sources */,
 				4305D1242540F54400EECB60 /* CloudKitHelper.swift in Sources */,
 				4305D1192540E14300EECB60 /* Recipes.swift in Sources */,
 				4305D11D2540E1B100EECB60 /* Recipe.swift in Sources */,
-				4305D1082540E10700EECB60 /* CloudRecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
